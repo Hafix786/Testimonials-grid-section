@@ -1,0 +1,100 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-weight: 500;
+    font-family: "Barlow Semi Condensed", system-ui;
+    text-align: left;
+    background-color: rgb(228, 234, 242);
+}
+
+.grid-container{
+    display: grid;
+    gap: 2rem;
+    width: 100%;
+    max-width: 1440px;
+    margin: auto;
+}
+
+.daniel{
+    background-color: rgb(115, 63, 200);
+    padding: 2rem;  
+    background-image: url(./images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: calc(100% - 2rem) top;
+    color: white;
+}
+.name{
+    border-radius: 1rem;
+    padding: 1.5rem;
+}
+.bio{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+img{
+    width: 2.5rem;
+    border-radius: 100%;
+    margin-right: 1rem;
+}
+.bio h3{
+    font-weight: 600;
+    opacity: 0.8;
+    margin: 0;
+}
+.bio div{
+    opacity: 0.5;
+}
+.name h3{
+    opacity: 0.8;
+    font-size: 1.5rem;   
+}
+.name p{
+    opacity: 0.6;
+}
+.jonathan{
+    background-color: rgb(73, 85, 107);
+    color: white;
+}
+.jeanette{
+    background-color: white;
+    color: black;
+}
+.patrick{
+    background-color: rgb(24, 32, 45);
+    color: white;
+}
+.kira{
+    background-color: white;
+    color: black;
+}
+
+@media (width > 425px) {
+    .grid-container{
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas: 
+        'daniel daniel jonathan kira'
+        'jeanette patrick patrick kira'
+        ;
+    }
+    .daniel{
+        grid-area: daniel;
+        background-position: calc(100% - 5rem) top;
+    }
+    .jonathan{
+        grid-area: jonathan;
+    }    
+    .kira{
+        grid-area: kira;
+    }
+    .jeanette{
+        grid-area: jeanette;
+    }
+    .patrick{
+        grid-area: patrick;
+    }
+    
+}
